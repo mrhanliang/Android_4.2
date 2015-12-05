@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00aaaa"
+    tools:context="com.example.s01_e17_progressbar.MainActivity" >
+
+    <ProgressBar
+        android:id="@+id/firstProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:max="200"
+        android:progress="100"
+        android:secondaryProgress="150"
+        style="?android:attr/progressBarStyleHorizontal"
+         />
+
+    <Button 
+        android:id="@+id/firstButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="增加第一速度"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/firstProgressBar"
+        />
+    
+    <Button 
+        android:id="@+id/secondButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="增加第二速度"
+        android:layout_below="@id/firstButton"
+        />
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="android.graphics.Color"/>
+<fullyQualifiedTypeName name="android.content.DialogInterface.OnClickListener"/>
+<fullyQualifiedTypeName name="cn.cqupt.s01_e05_view.MainActivity.ButtonListener"/>
+<fullyQualifiedTypeName name="cn.cqupt.s01_e11_imageview.R.id"/>
+<fullyQualifiedTypeName name="com.example.android_level1work.BuildConfig"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
+<fullyQualifiedTypeName name="android.text.Editable"/>
+<fullyQualifiedTypeName name="com.example.android_level1work.R.id"/>
+<fullyQualifiedTypeName name="com.example.work_level2.was.R"/>
+<fullyQualifiedTypeName name="android.R"/>
+<fullyQualifiedTypeName name="com.example.s01_e15_relativelayout01.R.layout"/>
+<fullyQualifiedTypeName name="com.example.s01_e15_relativelayout01.R.id"/>
+<fullyQualifiedTypeName name="android.content.Intent"/>
+<fullyQualifiedTypeName name="com.example.s01_e15_relativelayout01.SecActivity"/>
+<fullyQualifiedTypeName name="com.example.s01_e15_relativelayout01.MainActivity"/>
+<fullyQualifiedTypeName name="android.widget.TimePicker"/>
+<fullyQualifiedTypeName name="android.widget.TimePicker.OnTimeChangedListener"/>
+<fullyQualifiedTypeName name="cn.cqupt.s01_e16_timepicker.MainActivity.TimeListener"/>
+<fullyQualifiedTypeName name="cn.cqupt.s01_e16_timepicker.R.id"/>
+<fullyQualifiedTypeName name="cn.cqupt.s01_e16_timepicker.MainActivity.ButtonListener"/>
+<fullyQualifiedTypeName name="com.example.s01_e16_datepicker.R.id"/>
+<fullyQualifiedTypeName name="com.example.s01_e16_datepicker.MainActivity.ButtonListener"/>
+<fullyQualifiedTypeName name="com.example.s01_e17_progressbar.R.id"/>
+<fullyQualifiedTypeName name="com.example.s01_e17_progressbar.MainActivity.FirstButtonListener"/>
+<fullyQualifiedTypeName name="com.example.s01_e17_progressbar.MainActivity.SecondButtonListener"/>
+<fullyQualifiedTypeName name="android.widget.SeekBar.OnSeekBarChangeListener"/>
+<fullyQualifiedTypeName name="android.widget.SeekBar"/>
+<fullyQualifiedTypeName name="com.example.s01_e18_seekbar.MainActivity.SeekBarListener"/>
+<fullyQualifiedTypeName name="android.widget.RatingBar.OnRatingBarChangeListener"/>
+<fullyQualifiedTypeName name="com.example.s01_e18_ratingbar.MainActivity.RatingBarListener"/>
+<fullyQualifiedTypeName name="com.example.s01_e18_ratingbar.R.id"/>
+<fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.example.s01_e18_ratingbar.MainActivity.ButtonListener"/>
+</qualifiedTypeNameHistroy>

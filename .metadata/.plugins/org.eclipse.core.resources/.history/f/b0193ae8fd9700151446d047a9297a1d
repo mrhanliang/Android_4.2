@@ -1,0 +1,34 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="cn.cqupt.s01_e11_imageview.MainActivity" >
+
+    <ImageView
+        android:id="@+id/imageViewId"
+        android:layout_width="(320/3)dp"
+        android:layout_height="100dp"
+        android:src="@drawable/sadasd" 
+        android:background="#FF0000"
+        android:scaleType="centerCrop"
+        />
+    
+    <ImageView
+        android:id="@+id/imageViewId2"
+        android:layout_width="320/3dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_launcher"
+        android:background="#00FF00"
+        android:scaleType="centerCrop"
+        />
+    
+    <ImageView
+        android:id="@+id/imageViewId3"
+        android:layout_width="320/3dp"
+        android:layout_height="100dp"
+        android:src="@drawable/asqz"
+        android:scaleType="centerCrop"
+        />
+
+</LinearLayout>
