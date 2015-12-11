@@ -1,0 +1,8 @@
+package com.example.listviewtext;
+
+public class Student {
+	
+	private String Name;
+	
+	private String Class;
+}

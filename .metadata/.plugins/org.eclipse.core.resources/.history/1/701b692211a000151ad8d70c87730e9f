@@ -1,0 +1,107 @@
+package com.example.listviewtext;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.ListView;
+
+public class MainActivity extends Activity {
+	private ImageView imageView;
+	private ListView listView;
+	private List<Student> studentList = new ArrayList<Student>();
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		initStudents();
+		StudentAdapter adapter = new StudentAdapter(MainActivity.this, R.layout.student_item, studentList);
+		listView = (ListView) findViewById(R.id.listView);
+		listView.setAdapter(adapter);
+
+		imageView = (ImageView) findViewById(R.id.imageView1);
+
+		imageView.setOnClickListener(new View.OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
+				dialog.setTitle("提醒！");
+				dialog.setMessage("亲~您确定要退出吗？");
+				dialog.setCancelable(false);
+				dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						finish();
+					}
+				});
+				dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+
+					}
+				});
+				dialog.show();
+			}
+		});
+	}
+
+	private void initStudents() {
+		Student s1 = new Student("李明", "大一");
+		studentList.add(s1);
+		Student s2 = new Student("肖混", "大二");
+		studentList.add(s2);
+		Student s3 = new Student("赵宇", "大一");
+		studentList.add(s3);
+		Student s4 = new Student("孙越", "大一");
+		studentList.add(s4);
+		Student s5 = new Student("李鹏", "大二");
+		studentList.add(s5);
+		Student s6 = new Student("胡茜", "大一");
+		studentList.add(s6);
+		Student s7 = new Student("凤英", "大二");
+		studentList.add(s7);
+		Student s8 = new Student("凌天", "大一");
+		studentList.add(s8);
+		Student s9 = new Student("楚天", "大三");
+		studentList.add(s9);
+		Student s10 = new Student("康顺","大一");
+		studentList.add(s10);
+		Student s11 = new Student("龙樱","大二");
+		studentList.add(s11);
+		Student s12 = new Student("吴起","大三");
+		studentList.add(s12);
+		Student s13 = new Student("威远","大一");
+		studentList.add(s13);
+		student s14 = new Student("英凡","大一");
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// Handle action bar item clicks here. The action bar will
+		// automatically handle clicks on the Home/Up button, so long
+		// as you specify a parent activity in AndroidManifest.xml.
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+}

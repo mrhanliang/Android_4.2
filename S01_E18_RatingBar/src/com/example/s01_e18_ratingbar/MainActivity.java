@@ -14,37 +14,38 @@ public class MainActivity extends Activity {
 
 	private RatingBar ratingBar;
 	private Button button1;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		ratingBar=(RatingBar)findViewById(R.id.firstRatingBar);
-		button1=(Button)findViewById(R.id.firstButton);
-		
+		ratingBar = (RatingBar) findViewById(R.id.firstRatingBar);
+		button1 = (Button) findViewById(R.id.firstButton);
+
 		RatingBarListener listener = new RatingBarListener();
 		ratingBar.setOnRatingBarChangeListener(listener);
 		ButtonListener listener1 = new ButtonListener();
 		button1.setOnClickListener(listener1);
 	}
 
-	class ButtonListener implements OnClickListener{
+	class ButtonListener implements OnClickListener {
 
 		@Override
 		public void onClick(View v) {
 			ratingBar.setRating(ratingBar.getRating() + 0.5f);
 		}
-		
+
 	}
-	
-	class RatingBarListener implements OnRatingBarChangeListener{
+
+	class RatingBarListener implements OnRatingBarChangeListener {
 
 		@Override
 		public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
-			// TODO Auto-generated method stub
 			System.out.println("Rating: " + rating + ",FromUser: " + fromUser);
 		}
-		
+
 	}
+
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

@@ -40,6 +40,11 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			progressBar.incrementProgressBy(10);
+			int i = progressBar.getProgress();
+			System.out.println(i);
+			if(i == 100){
+				progressBar.setVisibility(View.INVISIBLE);
+			}
 		}
 		
 	}

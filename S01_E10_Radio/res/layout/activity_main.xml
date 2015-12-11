@@ -48,6 +48,6 @@
             android:layout_height="wrap_content"
             android:text="no"
             />
-    </RadioGroup>"
+    </RadioGroup>
 
 </LinearLayout>

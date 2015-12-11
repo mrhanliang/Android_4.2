@@ -1,0 +1,21 @@
+package com.example.listviewtext;
+
+public class Student {
+	
+	private String Name;
+	
+	private String i;
+	
+	public Student(String Name , String i){
+		this.Name = Name;
+		this.i = i;
+	}
+	
+	public String getName(){
+		return Name;
+	}
+	
+	public String geti(){
+		return i;
+	}
+}

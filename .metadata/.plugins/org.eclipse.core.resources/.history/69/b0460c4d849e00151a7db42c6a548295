@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@drawable/p1">
+
+	<RelativeLayout
+	    android:id="@+id/relativekayout1"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_centerVertical="true"
+	    android:layout_margin="10dp"
+	    android:background="@drawable/html" >
+
+	    <EditText
+	        android:id="@+id/nichengId"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="20dp"
+	        android:hint="昵称" />
+
+	    <EditText
+	        android:id="@+id/mimaId"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/nichengId"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginRight="20dp"
+	        android:layout_marginTop="20dp"
+	        android:hint="密码"
+	        android:inputType="textPassword" />
+
+	    <EditText 
+	        android:id="@+id/mimaId2"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="20dp"
+	        android:layout_marginTop="20dp"
+	        android:layout_marginRight="20dp"
+	        android:hint="确认密码"
+	        android:layout_below="@id/mimaId"
+	        android:inputType="textPassword"
+	        />
+	    
+	    <Button
+	        android:id="@+id/button1"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@id/mimaId2"
+	        android:background="@drawable/html"
+	        android:padding="20dp"
+	        android:text="注册"
+	        android:textColor="#6B8E23" />
+	</RelativeLayout>
+
+	<TextView
+	    android:id="@+id/zhuche"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@+id/relativekayout1"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="18dp"
+	    android:text="注册"
+	    android:textColor="#6B8E23"
+	    android:textSize="30dp" />
+    
+</RelativeLayout>

@@ -1,0 +1,15 @@
+package com.example.listviewtext;
+
+import java.util.List;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class StudentAdapter extends ArrayAdapter<Student>{
+
+	public StudentAdapter(Context context, int textViewResourceId, List<Student> objects) {
+		super(context, textViewResourceId, objects);
+		// TODO Auto-generated constructor stub
+	}
+	
+}
