@@ -2,14 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/m2" >
+    android:background="@drawable/q9" >
 
     <LinearLayout
         android:id="@+id/linearlayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="#ff6347" >
+        android:background="#778899" >
 
         <ImageView
             android:id="@+id/imageView1"
