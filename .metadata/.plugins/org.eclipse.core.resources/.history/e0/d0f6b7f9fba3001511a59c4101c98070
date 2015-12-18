@@ -1,0 +1,80 @@
+package com.example.fragmentbestpractice;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+
+
+public class NewsTitleFragment extends Fragment implements OnItemClickListener{
+
+	private ListView newsTitleListView;
+	private List<News> newsList;
+	private NewsAdapter adapter;
+	private boolean isTwoPane;
+	
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		newsList = getNews();
+		adapter = new NewsAdapter(activity, R.layout.news_item,newsList);
+	}
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View view = inflater.inflate(R.layout.news_title_frag, container, false);
+		newsTitleListView = (ListView)view.findViewById(R.id.news_title_list_view);
+		newsTitleListView.setAdapter(adapter);
+		newsTitleListView.setOnItemClickListener(this);
+		return view;
+	}
+	
+	@Override
+	public void onActivityCreated(Bundle savedInstanceState) {
+		super.onActivityCreated(savedInstanceState);
+		if(getActivity().findViewById(R.id.news_content_layout) != null){
+			isTwoPane = true;
+		}else{           
+			isTwoPane = false;
+		}
+	}
+	@Override
+	public void onItemClick(AdapterView<?>parent,View view,int position,long id){
+		News news = newsList.get(position);
+		if(isTwoPane){
+			NewsContentFrament newsContentFrament = (NewsContentFrament) getFragmentManager().findFragmentById(R.id.news_content_fragment);
+			newsContentFrament.refresh(news.getTitle(), news.getContent());
+		}else{
+			NewsContentActivity.actionStart(getActivity(), news.getTitle(),news.getContent());
+		}
+	}
+	
+	
+	private List<News> getNews(){
+		List<News> newsList = new ArrayList<News>();
+		News news1 = new News();
+		news1.setTitle("14岁男生数学满分考入复旦--数学满分考入复旦");
+		news1.setContent("开学季，当同龄人正要上初三，14周岁的肖宇鹤已踏入大学。今年高考，来自北京八中少年班的肖宇鹤以总分692分（数学满分）的成绩被复旦大学录取，属于高考正常录取。从小就对数学特别感兴趣的肖宇鹤还利用" + 
+						"刚刚过去的暑假自学了大学数学。DiegoRodriguez：他幸福快乐么？Skyflytime：大智若愚。在路上dlx：怎么看着不是充满青春活力那种，会不会是高分低能那种?珍尼姐姐77：若是一普通人，自我的控制力、理解" +
+						力都无法达到，就算是拼劲全力去学，恐怕也没有什么结，这世上总会有些人同我们芸芸大众不同。崔万岁cui：你怎么就知道人家是高分低能了，你怎么就知道人家学傻了？你有什么资格对一个十几岁的孩子冷嘲热
+						讽？特兰克斯与勇者之剑：小朋友加油，特佩服这种兴趣就是学习的孩子！许小伊vae：别管其他人的嘲笑，有梦想的人不会累，加油。m28E9rc20Ur5y1：我们从记事起就经常见到这类神童。那么问题来了，现在的马
+						云、周鸿祎、刘强东他们，以前是这样吗？好像不是。那么，过去的那些神童，他们现在是什么样子了？现在好像也见不到关于他们的报道。图图我们去哪里呀：好多酸评论，呵呵。你了解他吗？不认识就说人家高
+						分低能也是醉了。不说他的年龄，不说他对数学的天赋，就凭他能上复旦大学这一项就“秒”了很多人好吗？");
+		newsList.add(news1);
+		News news2 = new News();
+		news2.setTitle("");
+		news2.setContent("");
+		newsList.add(news2);
+		return newsList;
+	}
+
+}

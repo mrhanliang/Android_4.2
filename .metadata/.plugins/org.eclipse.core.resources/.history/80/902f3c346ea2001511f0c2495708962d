@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8e0e8" >
+
+    <LinearLayout 
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+		android:background="#ff4500"
+        >
+        
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/w6"
+            android:layout_margin="10dp"/>
+        
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="269dp"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="消息"
+            android:layout_marginLeft="95dp"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true">
+        
+        <EditText
+		android:id="@+id/editText1"
+		android:layout_height="wrap_content"
+		android:layout_width="0dp"
+		android:layout_weight="4" 
+        />
+        
+        <Button 
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+			android:background="#d8e0e8"
+            android:text="发送"/>
+        
+        </LinearLayout>
+
+</RelativeLayout>

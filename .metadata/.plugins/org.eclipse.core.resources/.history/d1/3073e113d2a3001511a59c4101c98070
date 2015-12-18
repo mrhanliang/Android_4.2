@@ -1,0 +1,9 @@
+package com.example.fragmentbestpractice;
+
+import android.app.Fragment;
+import android.widget.ArrayAdapter;
+
+public class NewsContentFrament extends Fragment{
+
+	private View view;
+}
