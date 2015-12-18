@@ -9,7 +9,7 @@
         android:id="@+id/textView1"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="内容已经刷新"
+        android:text="第二个Fragment"
         android:textSize="70dp"
         android:layout_gravity="center_horizontal"/>
 

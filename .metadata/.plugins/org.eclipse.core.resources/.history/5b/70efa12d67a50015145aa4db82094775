@@ -1,0 +1,16 @@
+package com.example.maillist;
+
+public class MailList {
+
+	private String Name;
+	
+	private String number;
+	
+	public void setName(String Name){
+		this.Name = Name;
+	}
+	
+	public String getName(){
+		return 
+	}
+}

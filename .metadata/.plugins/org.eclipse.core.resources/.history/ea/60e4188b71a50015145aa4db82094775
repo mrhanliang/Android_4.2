@@ -1,0 +1,8 @@
+package com.example.maillist;
+
+import android.app.Fragment;
+
+public class MailListContentFragment extends Fragment{
+
+	private View view;
+}

@@ -1,0 +1,12 @@
+package com.example.maillist;
+
+import android.app.Activity;
+import android.content.Intent;
+
+public class MailListContentActivity extends Activity{
+
+	public static void actionStart(Content content ,String mailListName ,String mailListContent){
+		Intent intent = new Intent(content , MailListContentActivity.class);
+		intent.setE
+	}
+}

@@ -1,0 +1,24 @@
+package com.example.maillist;
+
+import java.util.List;
+
+import android.app.Fragment;
+import android.view.View;
+import android.widget.Adapter;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ListView;
+
+public class MailListNameFragment extends Fragment implements OnItemClickListener{
+
+	private ListView mailListNameListView;
+	private List<MailList> mailListList;
+	private MailListAdapter adapter;
+	private boolean isTwoPane;
+	
+	@Override
+	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+		
+	}
+
+}

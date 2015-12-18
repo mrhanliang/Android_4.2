@@ -1,0 +1,84 @@
+package com.example.maillist;
+
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+public class MailListContentActivity extends Activity{
+
+	public static void actionStart(Context context ,String mailListName ,String mailListContent){
+		Intent intent = new Intent(context , MailListContentActivity.class);
+		intent.putExtra("mailList_Name", mailListName);
+		intent.putExtra("mailList_Content", mailListContent);
+		context.startActivity(intent);
+	}
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		setContentView(R.layout.maillist_content);
+		String mailListName = getIntent().getStringExtra("mailList_Name");
+		String mailListContent = getIntent().getStringExtra("mailList_Content");
+		MailListContentFragment mailListContentFragment = (MailListContentFragment) getFragmentManager().findFragmentById(R.id.mailList_content_fragment);
+		mailListContentFragment.refresh(mailListName, mailListContent);
+		
+		Button button1 = (Button) findViewById(R.id.tel);
+		Button button2 = (Button) findViewById(R.id.sendMessage);
+		
+		button1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Intent.ACTION_VIEW);
+				intent.setData(Uri.parse("tel:"));
+				startActivity(intent);
+			}
+		});
+		
+		button2.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(MailListContentActivity.this, "载入信箱......", Toast.LENGTH_SHORT).show();
+			}
+		});
+		
+		ImageView imageView1 = (ImageView) findViewById(R.id.imageView1);
+		imageView1.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				AlertDialog.Builder dialog = new AlertDialog.Builder(MailListContentActivity.this);
+				dialog.setTitle("提示！");
+				dialog.setMessage("确定要退出？");
+				dialog.setCancelable(false);
+				dialog.setPositiveButton("确定", new DialogInterface.OnClickListener(){
+
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						finish();
+					}
+					
+				});
+				dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						
+					}
+				};
+				});
+			}
+		});
+	}
+}

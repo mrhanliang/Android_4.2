@@ -1,0 +1,10 @@
+package com.example.maillist;
+
+import android.app.Activity;
+
+public class MailListContentActivity extends Activity{
+
+	public static void actionStart(){
+		
+	}
+}

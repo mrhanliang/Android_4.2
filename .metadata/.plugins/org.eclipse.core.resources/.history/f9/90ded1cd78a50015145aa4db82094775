@@ -1,0 +1,8 @@
+package com.example.maillist;
+
+import android.app.Fragment;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class MailListNameFragment extends Fragment implements OnItemClickListener{
+
+}

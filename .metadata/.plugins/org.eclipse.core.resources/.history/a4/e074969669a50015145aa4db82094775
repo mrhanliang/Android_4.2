@@ -1,0 +1,7 @@
+package com.example.maillist;
+
+import android.widget.ArrayAdapter;
+
+public class MailListAdapter extends ArrayAdapter<MailList>{
+
+}

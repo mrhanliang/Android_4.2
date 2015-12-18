@@ -1,0 +1,16 @@
+package com.example.maillist;
+
+import java.util.List;
+
+import android.content.Context;
+import android.widget.ArrayAdapter;
+
+public class MailListAdapter extends ArrayAdapter<MailList>{
+	
+	private int resourceId;
+	public MailListAdapter(Context context, int textViewResourceId, List<MailList> objects) {
+		super(context, textViewResourceId, objects);
+		
+	}
+
+}

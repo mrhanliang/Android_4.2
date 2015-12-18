@@ -1,0 +1,8 @@
+package com.example.maillist;
+
+public class MailList {
+
+	private String Name;
+	
+	private String number;
+}

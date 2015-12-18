@@ -1,0 +1,35 @@
+package com.example.maillist;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+
+
+public class MailListAdapter extends ArrayAdapter<MailList>{
+	
+	private int resourceId;
+	public MailListAdapter(Context context, int textViewResourceId, List<MailList> objects) {
+		super(context, textViewResourceId, objects);
+		resourceId = textViewResourceId;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		MailList mailList = getItem(position);
+		View view;
+		if(convertView == null){
+			view = LayoutInflater.from(getContext()).inflate(resourceId, null);
+		}else{
+			view = convertView;
+		}
+		TextView mailListTitleText = (TextView) view.findViewById(R.id.mailList_name);
+		TextView mailListTitleText1 = (TextView) view.findViewById(R.id.mailList_number);
+		mailListTitleText.setText(mailList.getName());
+		return view;
+	}
+}
